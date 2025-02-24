@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+     <link rel="stylesheet" href="styles.css">
+    <title>Steganography</title>
+</head>
+<body>
+    <h1>Steganography Tool</h1>
+    <h2>Encrypt Text into Image</h2>
+    <form id="encryptForm" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <input type="text" name="text" placeholder="Enter text to hide" required>
+        <button type="submit">Encrypt</button>
+    </form>
+    <h2>Decrypt Text from Image</h2>
+    <form id="decryptForm" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Decrypt</button>
+    </form>
+    <p id="result"></p>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
